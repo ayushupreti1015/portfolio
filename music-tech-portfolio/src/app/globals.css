@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0e27;
+  color: #e8f0f5;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.3px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00d966;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #33ff99;
+}
+
+/* Smooth transitions */
+button, a {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Minimalist card */
+.card-minimal {
+  background: rgba(0, 217, 102, 0.03);
+  border: 1px solid rgba(0, 217, 102, 0.15);
+}
+
+.card-minimal:hover {
+  background: rgba(0, 217, 102, 0.08);
+  border-color: #00d966;
+  box-shadow: 0 8px 32px rgba(0, 217, 102, 0.15);
+}
+
+/* Cinematic headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #e8f0f5;
+  text-transform: uppercase;
+}
+
+/* Smooth line animation */
+.line-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.line-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00d966, #33ff99);
+  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 10px rgba(0, 217, 102, 0.5);
+}
+
+.line-accent:hover::after {
+  width: 100%;
+}
+
+.line-accent:hover {
+  color: #33ff99;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: rgba(0, 217, 102, 0.2);
+}
+
+/* Smooth hover effects */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 217, 102, 0.2);
+}
